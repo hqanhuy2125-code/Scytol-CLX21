@@ -1,0 +1,220 @@
+/* Page Title */
+.page-title {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.page-title h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-title p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Headphones Section */
+.headphones-section {
+    background: #000;
+    padding: 80px 0;
+    min-height: 100vh;
+}
+
+.headphones-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.headphone-card {
+    position: relative;
+    background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.headphone-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(231, 76, 60, 0.4);
+    border-color: rgba(231, 76, 60, 0.3);
+}
+
+.headphone-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff4444;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: bold;
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
+}
+
+.headphone-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.headphone-image::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(231, 76, 60, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.headphone-card:hover .headphone-image::before {
+    opacity: 1;
+}
+
+.headphone-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.headphone-card:hover .headphone-image img {
+    transform: scale(1.08);
+}
+
+.headphone-info {
+    padding: 25px;
+    background: #0f0f0f;
+}
+
+.headphone-info h3 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+
+.headphone-desc {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.headphone-price {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff4444;
+    letter-spacing: 0.5px;
+}
+
+.price-old {
+    font-size: 16px;
+    color: #555;
+    text-decoration: line-through;
+}
+
+.price-sale {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4caf50;
+    letter-spacing: 0.5px;
+}
+
+.btn-read-more,
+.btn-select {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-read-more {
+    background: #2a2a2a;
+    color: white;
+    border: 1px solid #333;
+}
+
+.btn-read-more:hover {
+    background: #ff4444;
+    border-color: #ff4444;
+    box-shadow: 0 5px 20px rgba(255, 68, 68, 0.3);
+}
+
+.btn-select {
+    background: linear-gradient(135deg, #ff4444 0%, #e63939 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+}
+
+.btn-select:hover {
+    background: linear-gradient(135deg, #e63939 0%, #cc2f2f 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 68, 68, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .headphones-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .headphones-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .page-title h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headphones-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .page-title h1 {
+        font-size: 28px;
+    }
+    
+    .headphones-section {
+        padding: 40px 0;
+    }
+}

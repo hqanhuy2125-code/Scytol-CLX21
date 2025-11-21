@@ -1,0 +1,188 @@
+/* Page Title */
+.page-title {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.page-title h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-title p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Keyboards Section */
+.keyboards-section {
+    background: #000;
+    padding: 80px 0;
+    min-height: 100vh;
+}
+
+.keyboards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.keyboard-card {
+    position: relative;
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.keyboard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(231, 76, 60, 0.3);
+}
+
+.keyboard-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+.keyboard-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.keyboard-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.keyboard-card:hover .keyboard-image img {
+    transform: scale(1.1);
+}
+
+.keyboard-info {
+    padding: 25px;
+    background: #1a1a1a;
+}
+
+.keyboard-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+    min-height: 50px;
+}
+
+.keyboard-desc {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.keyboard-price {
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.price-old {
+    font-size: 16px;
+    color: #666;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.price-sale {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.btn-read-more,
+.btn-select {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-read-more {
+    background: #333;
+    color: white;
+}
+
+.btn-read-more:hover {
+    background: #e74c3c;
+}
+
+.btn-select {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-select:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .keyboards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .keyboards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .page-title h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .keyboards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .page-title h1 {
+        font-size: 28px;
+    }
+    
+    .keyboards-section {
+        padding: 40px 0;
+    }
+}
